@@ -723,7 +723,6 @@ figure.media figcaption {
 /* Ask-me-anything panel: conversational, programmed replies. */
 .ask {
   margin: clamp(2rem, 5vw, 3.5rem) auto 0;
-  max-width: 640px;
   background: none;
   border: 0;
   box-shadow: none;
