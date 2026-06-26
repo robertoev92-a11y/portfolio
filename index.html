@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roberto Viana — Senior Product Designer</title>
+  <meta name="description" content="Roberto Viana, senior product designer. I pair research and business strategy with building, and I build fast with AI." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="home">
+  <header class="site-header">
+    <a href="index.html" class="brand">Roberto Viana</a>
+    <nav class="nav">
+      <a href="index.html">Projects</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero wrap">
+      <div class="hero-top reveal">
+        <figure class="hero-photo">
+          <img src="assets/img/roberto.jpg" alt="Roberto Viana" />
+        </figure>
+        <h1>Hi, I'm Roberto Viana.<br />I build <span class="rotating" data-rotate>Platforms</span></h1>
+      </div>
+
+      <!-- Ask me anything: programmed, conversational replies -->
+      <div class="ask reveal-up" id="ask">
+        <div class="ask-head">
+          <span class="ask-status"></span>
+          <p>Ask me anything.</p>
+        </div>
+        <div class="ask-log" id="askLog" aria-live="polite"></div>
+        <div class="ask-chips" id="askChips">
+          <button type="button" data-key="role">What do you do?</button>
+          <button type="button" data-key="experience">Your experience?</button>
+          <button type="button" data-key="ai">How you use AI?</button>
+          <button type="button" data-key="work">Your best project?</button>
+          <button type="button" data-key="hire">Open to work?</button>
+          <button type="button" data-key="contact">How to reach you?</button>
+        </div>
+        <form class="ask-form" id="askForm" autocomplete="off">
+          <input id="askInput" type="text" placeholder="Or type your own question…" aria-label="Ask Roberto a question" />
+          <button type="submit" aria-label="Send">&rarr;</button>
+        </form>
+        <p class="ask-footer">Built with love and Claude Code &middot; 2026</p>
+      </div>
+    </section>
+
+    <!-- Project grid -->
+    <section class="section wrap">
+      <div class="grid">
+        <!-- Featured -->
+        <a class="card featured reveal-up" href="cases/carlshop-plus.html">
+          <div class="thumb">
+            <img src="assets/img/carlshop-hero.jpg" alt="Carlshop Plus — isometric grid of B2B e-commerce app screens" />
+          </div>
+          <div class="body">
+            <div class="tags meta"><span>B2B</span><span>2024 — present</span></div>
+            <h3>Carlshop Plus</h3>
+            <p style="color:var(--ink-soft); margin-top:0.4rem;">Scaling an e-commerce ecosystem for Asian markets.</p>
+          </div>
+        </a>
+
+        <a class="card reveal-up" href="cases/malty.html">
+          <div class="thumb">
+            <img src="assets/img/malty-card.jpg" alt="Malty design system — component inspection and design tokens" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="tags meta"><span>Design system</span><span>2024</span></div>
+            <h3>Malty design system</h3>
+            <p style="color:var(--ink-soft); margin-top:0.4rem;">Architecting a unified design system for Carlsberg.</p>
+          </div>
+        </a>
+
+        <a class="card reveal-up" href="cases/cadi.html">
+          <div class="thumb">
+            <img src="assets/img/cadi-card.jpg" alt="Cadi — a sales rep using the app on a phone in the field" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="tags meta"><span>B2B and B2C</span><span>2023</span></div>
+            <h3>Cadi</h3>
+            <p style="color:var(--ink-soft); margin-top:0.4rem;">A field-sales app for reps on the move.</p>
+          </div>
+        </a>
+
+        <a class="card reveal-up" href="cases/forecast-demand.html">
+          <div class="thumb">
+            <img src="assets/img/forecast-card.jpg" alt="Forecast Demand — predictive demand-planning dashboard on desktop" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="tags meta"><span>B2B and B2A</span><span>2022</span></div>
+            <h3>Forecast Demand</h3>
+            <p style="color:var(--ink-soft); margin-top:0.4rem;">Bridging supply logistics with predictive insights.</p>
+          </div>
+        </a>
+
+        <a class="card reveal-up" href="cases/branding.html">
+          <div class="thumb">
+            <img src="assets/img/branding-hero.jpg" alt="A selection of brand logos designed by Roberto Viana" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="tags meta"><span>Branding</span><span>2015 — ongoing</span></div>
+            <h3>Branding</h3>
+            <p style="color:var(--ink-soft); margin-top:0.4rem;">Logos and brand identities, 2015 — ongoing.</p>
+          </div>
+        </a>
+
+        <a class="card reveal-up" href="cases/motion-3d.html">
+          <div class="thumb">
+            <img src="assets/img/motion-poster.jpg" alt="Motion and 3D — still from a rendered animation" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="tags meta"><span>Video and Graphics</span><span>2022 — ongoing</span></div>
+            <h3>Motion and 3D</h3>
+            <p style="color:var(--ink-soft); margin-top:0.4rem;">Video, motion, and 3D experiments.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer wrap">
+    <span class="meta">© 2026 Roberto Viana</span>
+    <span class="built">Designed &amp; built by Roberto Viana with <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a>.</span>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

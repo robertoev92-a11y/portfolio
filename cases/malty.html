@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malty design system &mdash; Roberto Viana</title>
+  <meta name="description" content="Architecting a design system. A living ecosystem of shared language, components, and code for Carlsberg." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="brand">Roberto Viana</a>
+    <nav class="nav">
+      <a href="../index.html">Projects</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero wrap">
+      <p class="meta reveal">Design system &middot; 2024</p>
+      <h1 class="reveal">Malty design system</h1>
+      <p class="subtitle reveal">Architecting a design system</p>
+    </section>
+
+    <section class="wrap">
+      <div class="case-banner reveal-up">
+        <img src="../assets/img/malty-cover.png" alt="Malty, the Carlsberg design system cover" />
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section wrap">
+      <div class="prose reveal-up">
+        <h2>Beyond a UI kit</h2>
+        <p>At Carlsberg, the digital landscape was fragmented: inconsistent UI slowed every launch and diluted the brand. Rather than build a UI kit, we built a living ecosystem of shared language, components, and code.</p>
+        <div class="result">100% unified UI across all B2B and B2C touchpoints, with full WCAG 2.1 accessibility and developer parity.</div>
+        <p><strong>The mission:</strong> an open-source design system that supports dozens of projects while guaranteeing accessibility and developer parity, not just a folder of screens.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="fig-grid cols-2 stack-mobile reveal-up" style="gap: 40px;">
+        <figure class="media bare">
+          <img src="../assets/img/malty-components-2.png" alt="Malty components: form fields, buttons, sliders, empty states, status chips" loading="lazy" />
+        </figure>
+        <figure class="media bare">
+          <img src="../assets/img/malty-components-1.png" alt="Malty components: notifications, toggles, checkboxes, radios, date picker" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Design principles -->
+    <section class="section wrap">
+      <div class="prose reveal-up">
+        <h2>Design principles</h2>
+        <p>We established nine core pillars as organizational guidance. <span class="mark">Principles are the structural integrity of a design system</span>: they keep decisions consistent long after the first release.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <figure class="media bare reveal-up">
+        <img src="../assets/img/malty-principles.png" alt="Nine Malty design principles: understand, empathise, include, analyse, collaborate, reuse, scalable, innovate, iterate" loading="lazy" />
+        <figcaption>Nine pillars, from understand and empathise to innovate and iterate.</figcaption>
+      </figure>
+    </section>
+
+    <!-- The foundation -->
+    <section class="section wrap">
+      <div class="prose reveal-up">
+        <h2>The foundation</h2>
+        <p>We moved from arbitrary names like "Yellow-500" to semantic tokens. Change a brand's primary from green to blue, and one token updates the whole ecosystem. Transparent state layers handle interaction, so consistency holds without hundreds of hard-coded colors.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <figure class="media bare reveal-up">
+        <img src="../assets/img/malty-type.png" alt="Malty type scale across heading and body levels" loading="lazy" />
+        <figcaption>The type foundation: one scale, applied consistently across every product.</figcaption>
+      </figure>
+      <div class="fig-grid cols-2 stack-mobile reveal-up" style="gap: 40px; margin-top: var(--gap);">
+        <figure class="media bare">
+          <img src="../assets/img/malty-color.png" alt="Color and contrast tokens checked against WCAG AA and AAA" loading="lazy" style="background:#fff;" />
+          <figcaption>Color tokens, every pair checked against WCAG AA and AAA.</figcaption>
+        </figure>
+        <figure class="media bare">
+          <img src="../assets/img/malty-icons.png" alt="The Malty icon library" loading="lazy" style="background:#fff;" />
+          <figcaption>A single icon library, drawn on one grid.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- The systems architect -->
+    <section class="section wrap">
+      <div class="wireframe-split reveal-up">
+        <div class="prose">
+          <h2>The systems architect</h2>
+          <p>It fixes the common failures of popular design systems with a foundation that stays intuitive for designers and seamless for engineers. Every property reads from one place: element, tone, emphasis, and state.</p>
+        </div>
+        <figure class="media bare">
+          <img src="../assets/img/malty-tokens-tree.png" alt="Semantic token model: element, tone, emphasis, and state" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <figure class="media bare reveal-up">
+        <img src="../assets/img/malty-anatomy.png" alt="Component anatomy with semantic token annotations on an account menu" loading="lazy" />
+        <figcaption>Every element bound to a semantic token: fill, text, stroke, and state.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Light and dark mode -->
+    <section class="section wrap">
+      <div class="prose reveal-up">
+        <h2>Light and dark mode: consistency in contrast</h2>
+        <p>The same component renders correctly in both themes from one source of truth. For dark mode we built a surface-elevation system: the higher an element sits, the lighter its background becomes, so depth reads without a single extra hard-coded color.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <figure class="media bare media-70 reveal-up">
+        <img src="../assets/img/malty-darkmode.png" alt="The same account menu rendered in light and dark mode" loading="lazy" />
+        <figcaption>One component, both themes, no divergence.</figcaption>
+      </figure>
+      <figure class="media bare media-70 reveal-up" style="margin-top: var(--gap);">
+        <img src="../assets/img/malty-surface-chips.png" alt="Base, raised, and overlay surfaces in light and dark mode" loading="lazy" />
+        <figcaption>Surface elevation: base, raised, overlay, lighter as it lifts.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Overlays over duplication -->
+    <section class="section wrap">
+      <div class="prose reveal-up">
+        <h2>Overlays over duplication</h2>
+        <p>We built a scalable interaction-state system to speed up both prototyping and engineering handoff. Standard transparent overlays handle hover and press, which removed hundreds of redundant "hover-specific" color tokens.</p>
+        <p>Feedback stays uniform across the whole suite, consistent for users and lean for the asset library. And because only the base reacts to color, <span class="mark">the interactions never change</span>.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <figure class="media bare media-70 reveal-up">
+        <img src="../assets/img/malty-states.png" alt="Interaction states default, hover, pressed, focus, disabled, built from transparent layers" loading="lazy" />
+        <figcaption>States built from layers, not duplicated color sets.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Component architecture -->
+    <section class="section wrap">
+      <div class="prose reveal-up">
+        <h2>Intuitive component architecture</h2>
+        <p>A design system is <span class="mark">only successful if designers actually use it</span>. We built using a strict Atomic Design methodology, starting from Atoms (icons, tokens) to Molecules (pills, forms) to Organisms (product cards).</p>
+        <p>We utilized Auto-layout, Component Properties, and Variants to make components "smart." Instead of searching through a layer list, designers use simple toggle switches to change states, add icons, or swap layouts.</p>
+        <p>We also used flexible "Slot" components, allowing designers to inject custom content into complex organisms (like Modals or Accordions) without detaching the main instance.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <figure class="media bare reveal-up">
+        <img src="../assets/img/malty-props.png" alt="A product card component with its full set of properties" loading="lazy" />
+        <figcaption>One product card, every variation driven by properties.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Spacing and interaction -->
+    <section class="section wrap">
+      <div class="prose reveal-up">
+        <h2>Spacing and interaction</h2>
+        <p>A 4-point grid removed arbitrary spacing choices: every value is a multiple of four. The result is a reliable visual rhythm that scales seamlessly across the global product suite.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <figure class="media bare reveal-up">
+        <img src="../assets/img/malty-grid.gif" alt="Animated 4-point spacing grid applied to a layout" loading="lazy" />
+        <figcaption>The 4-point grid in motion, every gap a multiple of four.</figcaption>
+      </figure>
+      <figure class="media bare reveal-up" style="margin-top: var(--gap);">
+        <img src="../assets/img/malty-spacing.png" alt="Spacing tokens annotated on a product card" loading="lazy" />
+        <figcaption>The same rhythm applied down to a single card.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Interaction and motion -->
+    <section class="section wrap">
+      <div class="prose reveal-up">
+        <h2>Interaction and motion</h2>
+        <p>Motion is a token too. Transitions, feedback, emphasis, and expression are defined once and reused, so the system feels alive and predictable rather than decorated case by case.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <figure class="media bare reveal-up">
+        <img src="../assets/img/malty-interaction.gif" alt="Animated component interactions across the product card and buttons" loading="lazy" />
+        <figcaption>Components reacting in real time, all from shared motion tokens.</figcaption>
+      </figure>
+      <figure class="media bare reveal-up" style="margin-top: var(--gap);">
+        <img src="../assets/img/malty-motion.gif" alt="Motion principles: transitional, feedback, emphasis, and expressions" loading="lazy" />
+        <figcaption>Four motion principles: transitional, feedback, emphasis, expression.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Scalability -->
+    <section class="section wrap">
+      <div class="prose reveal-up">
+        <h2>Scalability at speed</h2>
+        <div class="result">New market <span class="mark">launches dropped from months to weeks</span>, with around 80% of the UI pre-built and pre-tested.</div>
+        <p>Malty reached 100% unified UI across all B2B and B2C touchpoints, and open-sourcing it established Carlsberg as a leader in the design community.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <figure class="media bare reveal-up">
+        <img src="../assets/img/malty-group6.png" alt="Malty applied across multiple Carlsberg product screens" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="section wrap">
+      <h2 class="next-head">See another project</h2>
+      <div class="next-projects">
+        <a class="card reveal-up" href="carlshop-plus.html">
+          <div class="thumb"><img src="../assets/img/carlshop-hero.jpg" alt="Carlshop Plus" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags meta"><span>B2B</span><span>2024 — present</span></div>
+            <h3>Carlshop Plus</h3>
+            <p style="color:var(--ink-soft); margin-top:0.4rem;">Scaling an e-commerce ecosystem for Asian markets.</p>
+          </div>
+        </a>
+        <a class="card reveal-up" href="cadi.html">
+          <div class="thumb"><img src="../assets/img/cadi-card.jpg" alt="Cadi field-sales app" loading="lazy" /></div>
+          <div class="body">
+            <div class="tags meta"><span>B2B and B2C</span><span>2023</span></div>
+            <h3>Cadi</h3>
+            <p style="color:var(--ink-soft); margin-top:0.4rem;">A field-sales app for reps on the move.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <a href="../index.html" class="meta" style="border-bottom:1px solid var(--accent); padding-bottom:2px;">&larr; Back to all projects</a>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span class="meta">&copy; 2026 Roberto Viana</span>
+    <span class="built">Designed &amp; built by Roberto Viana with <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a>.</span>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
