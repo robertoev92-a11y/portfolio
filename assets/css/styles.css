@@ -103,10 +103,22 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: var(--maxw);
+  width: 100%;
+  margin-inline: auto;
   padding: 1.1rem clamp(1.25rem, 5vw, 4rem);
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
+  z-index: -1;
 }
 
 .site-header .brand {
