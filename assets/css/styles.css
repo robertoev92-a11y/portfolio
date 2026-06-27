@@ -1093,3 +1093,178 @@ figure.media figcaption {
 .site-footer { font-family: var(--font-mono); font-size: var(--step-meta); }
 .site-footer .built a { color: var(--ink); border-bottom: 1px solid var(--accent); }
 .site-footer .built a:hover { color: var(--accent); }
+
+/* ---------- Get to know me ---------- */
+.know-me {
+  position: relative;
+  min-height: 75vh;
+  overflow: hidden;
+  background-color: #eae6df;
+  background-image: radial-gradient(circle, #c4bdb4 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.know-me-inner {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  height: 75vh;
+  min-height: 560px;
+  margin-inline: auto;
+}
+
+.know-me-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 3vw + 1.5rem, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Base card */
+.km-card {
+  position: absolute;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.04);
+  cursor: default;
+  will-change: transform;
+}
+
+.km-card:hover {
+  box-shadow: 0 10px 32px rgba(0,0,0,0.13);
+  z-index: 10;
+  filter: brightness(1.02);
+}
+
+/* Card positions + static rotations */
+.km-card--photo    { top: 10%; left: 9%;    width: 210px;  transform: rotate(-12deg); }
+.km-card--interests { top: 9%;  left: 44%;  width: 360px;  transform: rotate(2deg); }
+.km-card--chat     { top: 22%; right: 10%; width: 310px;  background: #c2f0ba; transform: rotate(-2deg); }
+.km-card--learning { top: 17%; left: 28%;                  background: #e8d5f5; transform: rotate(-5deg); }
+.km-card--music    { bottom: 17%; left: 10.5%; width: 285px; background: #1c1c2e; color: #fff; transform: rotate(3deg); }
+.km-card--cv       { bottom: 10%; left: 36%; width: 185px; background: #f5e59e; transform: rotate(-2deg); }
+.km-card--linkedin { bottom: 20%; left: 55%; width: 215px; background: #c5deff; transform: rotate(12deg); }
+.km-card--reading  { top: 47%; right: 7%;   width: 300px;  transform: rotate(4deg); }
+
+/* Shared label */
+.km-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.45rem;
+}
+.km-card--music   .km-label { color: rgba(255,255,255,0.45); }
+.km-card--chat    .km-label { color: #2d6e26; }
+
+/* Photo card */
+.km-photo-wrap { aspect-ratio: 3/4; border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; }
+.km-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.km-name { font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; text-align: center; }
+
+/* Interests card */
+.km-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.4rem; }
+.km-tags span { border: 1px solid var(--line); border-radius: 100px; padding: 0.18rem 0.65rem; font-size: 0.78rem; color: var(--ink-soft); }
+
+/* Chat card */
+.km-chat-dot { width: 8px; height: 8px; border-radius: 50%; background: #2a9f22; margin-bottom: 0.4rem; }
+.km-chat-role { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: #183a14; margin-bottom: 0.3rem; }
+.km-chat-location { font-size: 0.8rem; color: #2d6e26; line-height: 1.6; }
+
+/* Learning card */
+.km-learning-text { font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; }
+
+/* Music card */
+.km-music-top { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.55rem; }
+.km-music-art { width: 36px; height: 36px; background: #2e2e45; border-radius: 7px; flex-shrink: 0; }
+.km-music-meta { flex: 1; min-width: 0; }
+.km-music-title { font-weight: 600; font-size: 0.82rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.km-music-artist { font-size: 0.7rem; color: rgba(255,255,255,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.km-music-wave { font-size: 0.85rem; color: rgba(255,255,255,0.5); letter-spacing: -1px; }
+.km-music-time { display: flex; align-items: center; gap: 0.45rem; font-size: 0.68rem; color: rgba(255,255,255,0.4); margin-bottom: 0.55rem; }
+.km-music-bar { flex: 1; height: 2px; background: rgba(255,255,255,0.15); border-radius: 1px; }
+.km-music-bar div { width: 28%; height: 100%; background: rgba(255,255,255,0.55); border-radius: 1px; }
+.km-music-controls { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+.km-music-controls button { background: none; border: none; color: rgba(255,255,255,0.65); cursor: pointer; font-size: 0.8rem; padding: 0; }
+.km-play { width: 30px; height: 30px; background: #fff !important; color: #1c1c2e !important; border-radius: 50% !important; display: flex; align-items: center; justify-content: center; font-size: 0.7rem !important; }
+
+/* CV card */
+.km-cv-head { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: #5a4400; margin-bottom: 0.55rem; }
+.km-cv-file { display: flex; align-items: center; gap: 0.55rem; }
+.km-cv-file > span { font-size: 1.15rem; }
+.km-cv-file p { font-size: 0.82rem; font-weight: 500; color: #5a4400; margin: 0; }
+.km-cv-meta { font-size: 0.7rem !important; color: #8a7030 !important; font-weight: 400 !important; }
+
+/* LinkedIn card */
+.km-linkedin { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.3rem; text-decoration: none; }
+.km-linkedin-icon { width: 30px; height: 30px; background: #0A66C2; color: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; }
+.km-linkedin p { font-size: 0.82rem; font-weight: 600; color: #0a3a6e; margin: 0; }
+.km-linkedin-handle { font-size: 0.68rem !important; color: #4a6a8e !important; font-weight: 400 !important; }
+
+/* Reading card */
+.km-book-art { background: linear-gradient(160deg, #f5c200 0%, #e04800 55%, #140800 100%); border-radius: 8px; padding: 0.75rem 0.6rem; margin: 0.4rem 0 0.75rem; text-align: center; }
+.km-book-art > p { font-family: var(--font-display); font-weight: 900; font-size: 1rem; color: #fff; line-height: 1.15; text-transform: uppercase; letter-spacing: 0.02em; }
+.km-book-author { font-size: 0.62rem !important; font-weight: 400 !important; opacity: 0.7; margin-top: 0.3rem; }
+.km-book-progress { display: flex; align-items: center; gap: 0.45rem; }
+.km-book-progress .km-label { margin: 0; }
+.km-progress-bar { flex: 1; height: 4px; background: var(--line); border-radius: 2px; }
+.km-progress-bar div { height: 100%; background: var(--accent); border-radius: 2px; }
+.km-progress-num { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-soft); }
+
+/* Tooltip */
+.km-tip {
+  position: fixed;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.35rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 9999;
+  white-space: nowrap;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+.km-tip.is-visible { opacity: 1; }
+
+/* Below 1400px: tighten positions to reduce overlap */
+@media (max-width: 1400px) {
+  .km-card--interests { width: 300px; left: 35%; }
+  .km-card--chat      { width: 260px; right: 8%; top: 18%; }
+  .km-card--reading   { width: 240px; right: 5%; top: 45%; }
+  .km-card--linkedin  { left: 52%; }
+  .km-card--cv        { left: 33%; }
+  .km-card--music     { left: 8%; width: 255px; }
+  .km-card--photo     { left: 13%; width: 190px; }
+  .km-card--learning  { left: 71%; top: 79%; }
+}
+
+/* Medium screens (768–1024px): slightly smaller than desktop default */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .km-card--photo    { width: 185px; }
+  .km-card--interests { width: 275px; }
+  .km-card--chat     { width: 245px; }
+  .km-card--music    { width: 255px; }
+  .km-card--cv       { width: 165px; }
+  .km-card--linkedin { width: 195px; }
+  .km-card--reading  { width: 172px; }
+}
+
+/* Mobile: stack cards in a grid */
+@media (max-width: 767px) {
+  .know-me { min-height: unset; background-size: 18px 18px; }
+  .know-me-inner { height: auto; padding: var(--section) 1.25rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .know-me-title { position: static; transform: none; text-align: center; margin-bottom: 1.5rem; white-space: normal; font-size: clamp(2rem, 8vw, 3rem); }
+  .km-card { position: static; transform: none !important; }
+}

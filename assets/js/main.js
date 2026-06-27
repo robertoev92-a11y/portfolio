@@ -195,6 +195,32 @@
   update();
 })();
 
+/* Get to know me — hover tooltips. Cards are static. */
+(function () {
+  var section = document.querySelector('.know-me');
+  if (!section) return;
+
+  var tip = document.getElementById('kmTip');
+  if (!tip) return;
+
+  var cards = [].slice.call(section.querySelectorAll('.km-card'));
+  cards.forEach(function (card) {
+    var text = card.dataset.tip;
+    if (!text) return;
+    card.addEventListener('mouseenter', function () {
+      tip.textContent = text;
+      tip.classList.add('is-visible');
+    });
+    card.addEventListener('mousemove', function (e) {
+      tip.style.left = e.clientX + 'px';
+      tip.style.top  = e.clientY + 'px';
+    });
+    card.addEventListener('mouseleave', function () {
+      tip.classList.remove('is-visible');
+    });
+  });
+})();
+
 /* Ask-me-anything: programmed, conversational replies. Quick-action chips map
    straight to an answer; free-typed questions are matched on keywords, with a
    friendly fallback. Replies render as chat bubbles after a short typing beat. */
