@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://roberto-viana.com/sitemap.xml
