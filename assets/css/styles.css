@@ -1169,7 +1169,7 @@ figure.media figcaption {
 
 /* Photo card */
 .km-photo-wrap { aspect-ratio: 3/4; border-radius: 10px; overflow: hidden; margin-bottom: 0.6rem; }
-.km-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.km-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transform: scale(1.25); }
 .km-name { font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; text-align: center; }
 
 /* Interests card */
