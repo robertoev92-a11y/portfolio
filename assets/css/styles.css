@@ -1263,6 +1263,7 @@ figure.media figcaption {
 
 /* Mobile: stack cards in a grid */
 @media (max-width: 767px) {
+  .nav a[href*="CV_Roberto"] { display: none; }
   .know-me { min-height: unset; background-size: 18px 18px; }
   .know-me-inner { height: auto; padding: var(--section) 1.25rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
   .know-me-title { position: static; transform: none; text-align: center; margin-bottom: 1.5rem; white-space: normal; font-size: clamp(2rem, 8vw, 3rem); }
