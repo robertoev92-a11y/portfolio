@@ -128,7 +128,7 @@ h1, h2, h3 {
   letter-spacing: -0.01em;
 }
 
-.nav { display: flex; gap: 1.5rem; }
+.nav { display: flex; gap: 1.5rem; align-items: center; }
 
 .nav a {
   font-family: var(--font-mono);
