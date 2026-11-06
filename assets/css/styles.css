@@ -144,13 +144,26 @@ h1, h2, h3 {
 /* ---------- Hero ---------- */
 .hero { padding-block: clamp(3rem, 2rem + 6vw, 7rem) var(--section); }
 
+.hero-ident {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-ident .hero-photo {
+  width: clamp(44px, 6vw, 60px);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
 .hero-eyebrow {
   font-family: var(--font-mono);
   font-size: var(--step-meta);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  margin-bottom: 1.25rem;
+  margin: 0;
 }
 
 .hero-statement {
