@@ -172,12 +172,12 @@ h1, h2, h3 {
 .hero-statement {
   font-size: clamp(2.2rem, 1rem + 4.5vw, 5rem);
   line-height: 1.1;
-  max-width: 20ch;
+  max-width: 100%;
   margin: 0 0 1.5rem;
 }
 
 .hero-sub {
-  max-width: 56ch;
+  max-width: 100%;
   color: var(--ink-soft);
   font-size: clamp(1rem, 0.85rem + 0.5vw, 1.15rem);
   line-height: 1.65;
