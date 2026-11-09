@@ -417,7 +417,7 @@ h1 { letter-spacing: -0.035em; }
 h2, h3 { letter-spacing: -0.02em; }
 
 /* ---------- Hero, image-led ---------- */
-.hero h1 { max-width: 18ch; }
+.hero h1 { max-width: 100%; }
 .hero .rotating { position: relative; white-space: nowrap; }
 /* A subtle marker under the rotating word */
 .hero .rotating::after {
