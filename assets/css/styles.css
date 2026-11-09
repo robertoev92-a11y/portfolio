@@ -42,6 +42,9 @@
   --radius: 4px;
 }
 
+/* Homepage-only wider max-width */
+body.home { --maxw: 1440px; }
+
 /* ---------- Reset and base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; }
 
