@@ -145,7 +145,7 @@ h1, h2, h3 {
 .nav a:hover { border-color: var(--ink); }
 
 /* ---------- Hero ---------- */
-.hero { padding-block: clamp(3rem, 2rem + 6vw, 7rem) var(--section); }
+.hero { padding-block: clamp(1.5rem, 1rem + 2vw, 2.5rem) var(--section); }
 
 .hero-ident {
   display: flex;
