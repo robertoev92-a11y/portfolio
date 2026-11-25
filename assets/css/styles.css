@@ -31,7 +31,7 @@
   --step-hero: clamp(2.75rem, 1.2rem + 7vw, 7rem);
   --step-h2:   clamp(1.75rem, 1rem + 3vw, 3rem);
   --step-h3:   clamp(1.25rem, 1rem + 1vw, 1.6rem);
-  --step-body: 1rem;
+  --step-body: 1.1rem;
   --step-meta: 0.8rem;
 
   /* Space */
@@ -55,7 +55,7 @@ body {
   color: var(--ink);
   font-family: var(--font-body);
   font-size: var(--step-body);
-  line-height: 1.6;
+  line-height: 2rem;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -170,7 +170,7 @@ h1, h2, h3 {
 }
 
 .hero-statement {
-  font-size: clamp(2.2rem, 1rem + 4.5vw, 5rem);
+  font-size: 3rem;
   line-height: 1.1;
   max-width: 100%;
   margin: 0 0 1.5rem;
