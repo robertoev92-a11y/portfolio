@@ -326,15 +326,16 @@ h1, h2, h3 {
 }
 
 .cs-hero-subtitle {
-  font-size: clamp(1.1rem, 0.8rem + 1vw, 1.5rem);
+  font-size: var(--step-body);
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 2rem;
+  color: var(--ink-soft);
   margin-bottom: 1rem;
 }
 
 .cs-hero-desc {
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: var(--step-body);
+  line-height: 2rem;
   color: var(--ink-soft);
   max-width: 100%;
   margin-bottom: 2.5rem;
